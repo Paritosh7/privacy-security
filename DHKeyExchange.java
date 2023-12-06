@@ -114,10 +114,11 @@ public class DHKeyExchange {
         // Comparing the secrets
         compareSecrets(party1SharedSecret, party2SharedSecret, party3SharedSecret, party4SharedSecret);
 
-        // The shared secret should be same between the parties
-        // Using the shared secret any party can encrypt the data
-        // and the other party will be able to decrypt
-        // since the shared secret is the same.
+        /**
+         * If the shared secret is same between parties
+         * It can be used to encrypt as well decrypt data
+         * as all the parties will have to same key.
+         */
 
     }
 
