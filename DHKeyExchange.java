@@ -2,6 +2,7 @@ import java.security.*;
 import javax.crypto.*;
 import javax.crypto.spec.*;
 import javax.crypto.interfaces.*;
+import java.util.Arrays;
 
 public class DHKeyExchange {
 
@@ -125,19 +126,19 @@ public class DHKeyExchange {
     private static void compareSecrets(byte[] party1SharedSecret, byte[] party2SharedSecret, byte[] party3SharedSecret,
             byte[] party4SharedSecret) {
 
-        if (java.util.Arrays.equals(party1SharedSecret, party2SharedSecret))
+        if (Arrays.equals(party1SharedSecret, party2SharedSecret))
             System.out.println("Party1 and Party2 shared secret is the same");
 
         else
             System.out.println("Party1 and Party2 shared secret is different");
 
-        if (java.util.Arrays.equals(party2SharedSecret, party3SharedSecret))
+        if (Arrays.equals(party2SharedSecret, party3SharedSecret))
             System.out.println("Party2 and Party3 shared secret is the same");
 
         else
             System.out.println("Party2 and Party3 shared secret is different");
 
-        if (java.util.Arrays.equals(party3SharedSecret, party4SharedSecret))
+        if (Arrays.equals(party3SharedSecret, party4SharedSecret))
             System.out.println("Party3 and Party4 shared secret is the same");
 
         else
